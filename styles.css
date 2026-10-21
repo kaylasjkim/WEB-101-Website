@@ -5,6 +5,8 @@ body {
 /* {s contain the styling instructions */
     background-color: #e8f0ff;
 /* a ; ends a CSS declaration */
+    padding-bottom: 70 px; 
+/* this adds 70 pixles of extra space at the bottom of the webpage */
 }
 
 /*** Navbar ***/
@@ -52,4 +54,81 @@ body {
 /* in a horizontal flexbox layout, ^ this line aligns the items along the vertical center of the container */
     flex-wrap: wrap;
 /* this allows flexbox items to move/wrap onto another row when there isn't enough horizontal space */
+}
+
+/* Rule: controls the size of the header image */
+#header-img {
+/* #header-img selects the HTML element with id="header-img" */
+/* Note: # is used for ID selectors, while . is used for class selectors */
+    width: 150px;
+/* width: 150px sets the image's width to 150 pixels */
+    height: auto;
+/* height: auto; preserves the image's original proportions so it doesn't appear stretched */
+}
+
+/* Rule: styles the main website title */
+.header-title {
+    color: #1e3a8a;
+    font-size: 32px;
+/* class="header-title" from the HTML file gives the heading a custom class */
+/* .header-title selects that class in the CSS file */
+}
+
+/* Rule: styles the Event Description heading */
+#description {
+    color: #1e40af;
+    font-size: 26px;
+/* Confusion: (?) '#description selects the HTML element with id="description"' */
+}
+
+/* Rule: styles the Event Schedule heading */
+#schedule {
+    color: #1e40af;
+    font-size: 26px;
+/* similarly to previous rule, #schedule selects the HTML element with id="schedule" */
+}
+
+/* Rule: styles the Links section heading */
+#links {
+    color: #1e40af;
+    font-size: 26px;
+/* same logic, #links selects the HTML element with id="links" */
+}
+
+/* Rule: styles the event description paragraph */
+.event-description {
+/* event-description targets the paragraph's new class */
+    font-size: 18px;
+    line-height: 1.6;
+/* line-height is the spacing in between each line of text */
+}
+
+/* Rule: styles the description of event activities */
+.activity-description {
+/* .activity-description selects elements with class="activity-description" */
+    font-size: 17px;
+    color: #374151;
+}
+
+/*** Footer ***/
+/* Rule: keeps the footer at the bottom of the browser window */
+.footer {
+    position: fixed;
+    /* keeps the footer in the same position while scrolling */
+    bottom: 0;
+    /* positions it against the bottom of the window */
+    left: 0;
+    /* aligns it with the left edge of the window */
+    width: 100%;
+    /* makes the page span to the window's width */
+    background-color: #1e3a8a;
+    padding: 10px;
+    /* adds space inside the footer */
+}
+
+/* Rule: makes footer links white and adds spacing */
+.footer a {
+/* .footer a selects every <a> (link) inside the element with class="footer" */
+    color: white;
+    margin-right: 20px;
 }
