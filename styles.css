@@ -32,3 +32,16 @@ body {
     color: #2563eb;
     text-decoration: underline;
 }
+
+/*** Header ***/
+.header-container {
+/* .header-container selects the container created in the HTML file */
+    display: flex;
+/* display: flex; activates Flexbox, a CSS layout system for arranging elements */
+    gap: 20px;
+/* the gap property adds 20 pixels of space between neighboring Flexbox items */
+    align-items: center;
+/* in a horizontal flexbox layout, ^ this line aligns the items along the vertical center of the container */
+    flex-wrap: wrap;
+/* this allows flexbox items to move/wrap onto another row when there isn't enough horizontal space */
+}
