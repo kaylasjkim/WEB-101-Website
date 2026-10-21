@@ -24,12 +24,14 @@
 <!-- "<div class='navbar'" creates the navigation bar container -->
     <ul>
 <!-- "<ul>" starts a list -->
-        <li><a href="#id-1">Link 1</a></li>
+        <li><a href="#description">Event description</a></li>
 <!-- "<li>" creates one list item -->
 <!-- "<a href='...'>" creates a clickable link -->
-        <li><a href="#id-2">Link 2</a></li>
-        <li><a href="#id-3">Link 3</a></li>
-        <li><a href="#id-4">Link 4</a></li>
+<!-- href="description" tells the browser to navigate to the element with id="description"-->
+        <li><a href="#schedule">Event Schedule</a></li>
+<!-- this is how we updated the second link -->
+        <li><a href="#links">Links</a></li>
+<!-- this is how we updated the third link (again with the #s and titles)-->
     </ul>
 <!-- "</ul>" ends the list -->
 </div>
@@ -53,7 +55,6 @@
         <button type="button">Button 1</button>
         <button type="button">Button 2</button>
     </div>
-        </body>
 
         
         <!-- about
@@ -68,7 +69,9 @@
         - [ ] Project 4 (STRETCH FEATURE) 
         - [ ] Any time between / after
         --> 
-        <h2>About the Event</h2>
+        <h2 id="description">Event description</h2>
+        <!-- id="description" adds an identifer-->
+        <!-- or in other words, creates a destination that a navbar link can reference using #description -->
         <p>Event description paragraph text</p>
 
         <h3>What to Expect</h3>
@@ -90,7 +93,8 @@
         - [ ] Project 4 (STRETCH FEATURE) 
         - [ ] Any time between / after
         --> 
-        <h2>Event Schedule</h2>
+        <h2 id="schedule">Event schedule</h2>
+        <!-- id="schedule" helps navbar find the heading -->
 
         <img alt="" src="./img/placeholder.png"/>
         <h3>Event Activity 1</h3>
@@ -117,7 +121,7 @@
         - [ ] Project 4 (STRETCH FEATURE) 
         - [ ] Any time between / after
         --> 
-        <h2>Links</h2>
+        <h2 id="links">Links</h2>
 
         <!-- This <a> block is one link.  Copy and paste all 6 lines to create another link. -->
         <a class="block" href="https://www.codepath.org">

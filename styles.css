@@ -33,6 +33,14 @@ body {
     text-decoration: underline;
 }
 
+/* Rule: changes a navbar link's color while it is being clicked */
+.navbar ul li a:active {
+    color: #dc2626;
+}
+/* active is a CSS psuedo-class that applies while a link is activated... */
+/* ...typically when the mouse button is held down */
+/* this is the 2nd psuedo-class, the 1st was :hover */
+
 /*** Header ***/
 .header-container {
 /* .header-container selects the container created in the HTML file */
