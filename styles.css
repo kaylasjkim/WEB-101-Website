@@ -1,1 +1,34 @@
-/*** You will not need this file until Unit 3 ***/
+/*** WEB101 Website Stylesheet ***/
+/* This file controls how my website looks. */
+
+body { 
+/* {s contain the styling instructions */
+    background-color: #e8f0ff;
+/* a ; ends a CSS declaration */
+}
+
+/*** Navbar ***/
+.navbar ul {
+/* .navbar selects an HTML element with class="navbar" */
+/* ul selects an unordered list inside that navbar */
+    list-style-type: none;
+/* line above removes the default bullet points */
+    padding: 0;
+/* padding: 0; removes the list's default internal spacing */
+}
+
+/* This section added a horizontal navbar */
+.navbar ul li {
+/* .navbar ul li selects the list items inside the navbar */
+    display: inline-block; 
+/* display: inline-block; allows the list items to sit side-by-side */
+    margin-right: 20px;
+/* margin-right: 20px; adds space to the right of each link */ 
+}
+
+/* This section adds a hover effect to the navbar  */
+.navbar ul li a:hover {
+/* :hover applies the rule only when the mouse pointer is hovering over a link */
+    color: #2563eb;
+    text-decoration: underline;
+}
