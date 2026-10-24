@@ -132,3 +132,44 @@ body {
     color: white;
     margin-right: 20px;
 }
+
+/*** Dark Mode ***/
+
+/* Default dark mode style */
+/* Rule: two added CSS properties */
+.dark-mode {
+    background-color: #111827;
+    color: #f9fafb;
+    /* color: is text color, background-color is background color */
+}
+
+/* Different dark mode style for headings */
+.dark-mode h1 {
+/* this line targets <h1> headings only when dark mode is active */
+    color: #93c5fd;
+}
+
+/* Rule: same rule as above, just targetting a different heading */
+.dark-mode h2 {
+    color: #93c5fd;
+}
+
+/* Different dark mode style for links */
+.dark-mode a {
+/* dark-mode a selects links (<a> elements) inside an element with the dark-mode class */
+/* this rule only applies to links while dark mode is active */
+    color: #7dd3fc;
+}
+
+/* Rule: customizes the dark modle toggle button */
+#theme-button {
+    background-color: #1e3a8a;
+    color: white;
+    padding: 10px 16px;
+    /* padding adds space inside the button */
+    border: none;
+    /* border removes the default border */
+    border-radius: 6px;
+    /* border-radius rounds the corners */
+    cursor: pointer;
+}
