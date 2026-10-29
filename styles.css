@@ -173,3 +173,20 @@ body {
     /* border-radius rounds the corners */
     cursor: pointer;
 }
+
+/*** RSVP Section ***/
+.rsvp-container {
+    display: flex;
+    /* activates flexbox for the RSVP container */ 
+    flex-direction: row;
+    /* places the two sections side-by-side */
+    gap: 30px;
+    /* adds 30px spacing between the columns */
+}
+.rsvp-para {
+    flex: 1;
+    /* gives both columns an equal share of available space */
+}
+.rsvp-participants {
+    flex: 1; 
+}
