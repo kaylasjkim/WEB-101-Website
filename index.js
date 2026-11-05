@@ -33,7 +33,6 @@ themeButton.addEventListener("click",toggleDarkMode);
 // .addEventListener() tells JS to listen for an interaction.
 // "click" specifies the interaction JS is listening for. 
 const rsvpForm = document.getElementById("rsvp-form");
-alert("RSVP form found: " + (rsvpForm !== null));
 // const creates a variable that cannot be reassigned.
 // "rsvp-form" matches the id in the HTML file. 
 // ^ that line connects the JS to the RSVP form which is in the HTML file. 
@@ -44,14 +43,26 @@ const handleRSVP = (event) => {
   event.preventDefault();
 // preventDefault() prevents the browser from navigating or reloading as the default behavior when submitting an HTML form. 
 // i.e., prevents the user from receiving the frowning face on the piece of paper icon. 
-// this line retrieves the visitor's name: 
+
+// const name stores the user's name 
 const name = document.getElementById("rsvp-name").value;
 // .value retrieves the text currently entered in that field. 
-// const name stores the user's name
-const email = document.getElementById("rsvp-email").value;
-const state = document.getElementById("rsvp-state").value; 
+  // validates the user's name: 
+  if (name.trim().length <2) {
+    alert("Please enter a name with at least 2 characters.");
+    return;
+  }
+
 // const email stores the user's email 
+const email = document.getElementById("rsvp-email").value;
+
 // const state stores the user's state 
+const state = document.getElementById("rsvp-state").value; 
+  // validates the user's state: 
+  if (state.trim().length < 2) {
+    alert("Please enter a state with at least 2 characters.");
+    return;
+  }
 
 // this line notifies when a participant has RSVP'd with their information. 
 const newParticipant = document.createElement("p");
@@ -59,6 +70,9 @@ newParticipant.textContent = `🚀 ${name} from ${state} has RSVP'd.`;
 
 // this line adds a new participant to the RSVP list.
 document.querySelector(".rsvp-participants").appendChild(newParticipant);
+
+// this line clears the RSVP form after submission. 
+rsvpForm.reset();
 };
 
 // Step 5: Register the RSVP Submission Event Listener 
