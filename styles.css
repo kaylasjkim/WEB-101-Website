@@ -5,8 +5,8 @@ body {
 /* {s contain the styling instructions */
     background-color: #e8f0ff;
 /* a ; ends a CSS declaration */
-    padding-bottom: 70 px; 
-/* this adds 70 pixles of extra space at the bottom of the webpage */
+    padding-bottom: 100px; 
+/* this adds 100 pixles of extra space at the bottom of the webpage */
 }
 
 /*** Navbar ***/
@@ -189,4 +189,29 @@ body {
 }
 .rsvp-participants {
     flex: 1; 
+} 
+    /* RSVP Form Styling [ADDED IN UNIT 6] */
+
+#rsvp-form {
+    display: flex;
+    flex-direction: column;
+    /* stacks the RSVP form elements vertically */
+    gap: 10px;
+    max-width: 400px;
+    /* prevents the RSVP form from becoming too wide */
+}
+
+#rsvp-form input {
+    padding: 8px;
+    border: 1px solid #9ca3af;
+    border-radius: 5px;
+}
+
+#rsvp-button {
+    padding: 10px;
+    background-color: #1e3a8a;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
 }
