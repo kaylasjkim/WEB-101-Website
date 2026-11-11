@@ -44,11 +44,16 @@ const handleRSVP = (event) => {
 // preventDefault() prevents the browser from navigating or reloading as the default behavior when submitting an HTML form. 
 // i.e., prevents the user from receiving the frowning face on the piece of paper icon. 
 
+// removes red highlighting after correcting an invalid name, email, or state. 
+document.getElementById("rsvp-name").classList.remove("rsvp-error");
+document.getElementById("rsvp-state").classList.remove("rsvp-error");
+
 // const name stores the user's name 
 const name = document.getElementById("rsvp-name").value;
 // .value retrieves the text currently entered in that field. 
   // validates the user's name: 
   if (name.trim().length <2) {
+    document.getElementById("rsvp-name").classList.add("rsvp-error");
     alert("Please enter a name with at least 2 characters.");
     return;
   }
@@ -60,6 +65,7 @@ const email = document.getElementById("rsvp-email").value;
 const state = document.getElementById("rsvp-state").value; 
   // validates the user's state: 
   if (state.trim().length < 2) {
+    document.getElementById("rsvp-state").classList.add("rsvp-error");
     alert("Please enter a state with at least 2 characters.");
     return;
   }
@@ -77,3 +83,37 @@ rsvpForm.reset();
 
 // Step 5: Register the RSVP Submission Event Listener 
 rsvpForm.addEventListener("submit", handleRSVP);
+
+
+// Step 6: Detect Sections Entering the Screen
+// finds all sections with the "revealable" class
+const revealableSections = document.querySelectorAll(".revealable");
+// .querySelectorAll(".revealable") finds all sections with the "revealable" class
+
+// Watch whether each section enters or leaves the screen
+const revealObserver = new IntersectionObserver((entries) => {
+  // IntersectionObserver watches when sections enter or exist the screen. 
+    entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+            // entry.isIntersecting checks whether the section is visible or not. 
+            // section is on screen: reveal it
+            entry.target.classList.remove("hidden");
+            entry.target.classList.add("active");
+        } else {
+            // section is off screen: hide it
+            entry.target.classList.remove("active");
+            entry.target.classList.add("hidden");
+        }
+        // classList.add("active") makes the screen visible 
+        // classList.add("hidden") makes the screen hidden
+    });
+}, {
+    threshold: 0.1
+    // the trigger when 10% of a section is visible 
+});
+
+// starts watching each section
+revealableSections.forEach((section) => {
+    revealObserver.observe(section);
+    // .observe(section) starts monitorying that section. 
+});

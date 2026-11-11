@@ -215,3 +215,35 @@ body {
     border-radius: 5px;
     cursor: pointer;
 }
+
+/* Rule: invalid inputs are highlighnted red */ 
+.rsvp-error {
+/* .rsvp-error creates a reproducible class for invalid inputs */ 
+    border: 2px solid red !important; 
+    /* !important overrides the existing input border styling */
+    background-color: #ffe6e6;
+}
+
+/*** SCROLLING ANIMATION ***/
+/* Rule: original state of a section of the website before a section is revealed */
+.revealable {
+    opacity: 1;
+    /* makes the section fully visible */ 
+    transform: translateY(0);
+}
+
+/* Rule: section fades in while scrolling through website */
+.revealable.hidden {
+    opacity: 0;
+    /* makes the section invisible */ 
+    transform: translateY(50px);
+    /* positions a section of the website 50px lower */
+}
+
+/* Rule: visible state after scrolling into view */
+.revealable.active {
+    opacity: 1; 
+    transform: translateY(0);
+    /* positions the section back to its original position */ 
+    transition: opacity 1s ease, transform 1s ease; 
+}
