@@ -247,3 +247,49 @@ body {
     /* positions the section back to its original position */ 
     transition: opacity 1s ease, transform 1s ease; 
 }
+
+/*** RSVP Modal Styling ***/
+/* Rule: darkens background covering the webpage */
+.modal {
+    display: none;
+    /* ^ this line hides the modal until an RSVP has been submitted */ 
+    position: fixed;
+    z-index: 1000;
+    /* ^ this line places the modal on top of website content */
+    left: 0;
+    top: 0;
+    width: 100%; height: 100%; /* this line makes it cover the entire screen */
+    background-color: rgba(0, 0, 0, 0.7); /* this line creates a dark background w/ 70% opacity */
+    justify-content: center; align-items: center; /* this line centers the confirmation box horizontally & vertically */
+}
+/* Rule: white confirmation box in the center */
+.modal-content {
+    background-color: white;
+    color: black;
+    padding: 30px; 
+    border-radius: 12px; /* this line gives the pop-up rounded edges */
+    text-align: center;
+    width: 80%;
+    max-width: 400px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+}
+
+/*** Modal Image Animation ***/
+#modal-img {
+    animation: rocketPulse 2s ease-in-out infinite; 
+    /* ^ this line means each animation cycle lasts 2 seconds! */
+    /* ease-in-out makes the movement start and finish with ease */ 
+    /* infinite repeats/loops the animation */
+}
+@keyframes rocketPulse {
+    0% {
+        transform: scale(1);
+    }
+    50% { 
+        transform: scale(1.15);
+        /* scales image to 115% of its normal size */
+    }
+    100% {
+        transform: scale(1);
+    }
+} 

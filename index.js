@@ -77,7 +77,23 @@ newParticipant.textContent = `🚀 ${name} from ${state} has RSVP'd.`;
 // this line adds a new participant to the RSVP list.
 document.querySelector(".rsvp-participants").appendChild(newParticipant);
 
-// this line clears the RSVP form after submission. 
+// displays the confirmation modal after a successful RSVP 
+const successModal = document.getElementById("success-modal");
+// getElementById("success-modal") finds the modal container 
+const modalMessage = document.getElementById("modal-message");
+// getElementById("modal-message") finds the confirmation paragraph
+modalMessage.textContent = 'Thank you. Your RSVP for the SpaceX Starlink Mission is confirmed.';
+successModal.style.display = "flex";
+// ^ this line makes the modal visible and centers it. 
+
+// automatically closes the confirmation modal after 5 seconds:
+setTimeout(() => {
+// setTimeout() runs a function once after a specified delay 
+// this line hides the modal: 
+  successModal.style.display = "none";
+}, 5000); // 5000 milliseconds = 5 seconds 
+
+// this line clears the RSVP form after submission: 
 rsvpForm.reset();
 };
 

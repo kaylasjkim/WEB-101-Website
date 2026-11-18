@@ -171,7 +171,7 @@
 
         <!-- This adds an Email field -->
          <label for="rsvp-email">Email:</label>
-         <input for="email" id="rsvp-email" name="email" required>
+         <input type="email" id="rsvp-email" name="email" required>
 
         <!-- This adds a State field -->
          <label for="rsvp-state">State:</label>
@@ -180,7 +180,20 @@
         <!-- This adds the RSVP submit button  -->
          <button type="submit" id="rsvp-button">Submit RSVP</button>
      </form>
-            
+<!-- RSVP Success Modal [ADDED IN UNIT 9]-->
+<div id="success-modal" class="modal">
+    <!-- id="success-modal" identifies the popup for JS -->
+    <div class="modal-content">
+        <h2>RSVP confirmed!</h2>
+        <img 
+            id="modal-img"
+            src="./img/placeholder.png"
+            alt="SpaceX Starlink Mission Logo"
+            width="120"
+        > 
+        <p id="modal-message"></p>
+    </div>
+</div>
         <!-- footer [PLACEHOLDER] [ADDED IN UNIT 3] -->
          <div class="footer">
             <a href="https://www.spacex.com/">SpaceX</a>
